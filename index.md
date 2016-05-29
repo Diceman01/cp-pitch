@@ -1,0 +1,55 @@
+---
+title       : Learning your own Age
+subtitle    : Developing Data Products Course Project Pitch Deck
+author      : P McCann
+job         : 
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+---
+
+## An age-old problem
+
+It's inevitable - people will ask you how old you are.   You will wonder how old you are.   You will wonder if **that** much time has really passed.   Well, wonder no more.   [This app](https://diceman01.shinyapps.io/ddp-course-project/) will be able to tell you exactly how old you are - in years, months or days.   Imagine that!
+
+---
+
+## How old are you in years?
+
+1. Enter your date of birth in the ```date of birth``` field.
+1. Do nothing else.   The app will tell you your age in years.
+
+
+For instance, if you were to set your date of birth to 01 January 2000, the app would tell you that you are:
+
+```r
+dob <- as.Date("2000-1-01")
+ty <- Sys.Date()
+as.POSIXlt(ty)$year - as.POSIXlt(dob)$year + if(as.POSIXlt(ty)$mon - as.POSIXlt(dob)$mon < 0){-1} else {0}
+```
+
+```
+## [1] 16
+```
+
+
+---
+
+## How old are you in months?
+
+1. Enter your date of birth in the ```date of birth``` field.
+1. Select months from the ```units``` drop down.   
+
+The app will tell you your age in months.   
+
+---
+
+## How old are you in days?
+
+1. Enter your date of birth in the ```date of birth``` field.
+1. Select days from the ```units``` drop down.   
+
+The app will tell you your age in days.

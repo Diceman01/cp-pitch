@@ -1,0 +1,7 @@
+name: Publish Document
+account: rpubs
+server: rpubs.com
+appId: https://api.rpubs.com/api/v1/document/184709/6102be4a87164c2b9128e1507c28b520
+bundleId: https://api.rpubs.com/api/v1/document/184709/6102be4a87164c2b9128e1507c28b520
+url: http://rpubs.com/diceman/184709
+when: 1464547545.93031
